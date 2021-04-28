@@ -1,5 +1,5 @@
 {
 	"hooks": {
-		"pre-commit": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx . && npm run validate"
+		"pre-commit": "tsc && lint-staged && npm run build"
 	}
 }
