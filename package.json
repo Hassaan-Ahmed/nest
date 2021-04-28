@@ -73,5 +73,14 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx)": ["eslint"],
+    "**/*.+(js|json|jsx|ts|tsx|html|css)": ["prettier --write", "git add"]
   }
 }
