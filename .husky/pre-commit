@@ -6,7 +6,7 @@ npx lint-staged
 
 FILE="../.env"
 if [ -s $FILE ]; then
-
+echo "in file $FILE found and not empty"
 export $(grep -v '^#' $FILE | tr -d ' ' | xargs)
 echo "$FILE is been read"
 case "${NODE_ENV,,}" in prod*) npm run build;; esac
