@@ -11,6 +11,8 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "paths": {
       "@root/*": ["./src/*"],
       "@common/*": ["./src/common/*"]
