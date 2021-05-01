@@ -5,6 +5,7 @@ npm run check-type
 npx lint-staged
 
 FILE="../.env"
+echo "$FILE path"
 if [ -s $FILE ]; then
 echo "in file $FILE found and not empty"
 export $(grep -v '^#' $FILE | tr -d ' ' | xargs)
