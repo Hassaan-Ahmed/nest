@@ -4,13 +4,14 @@
 npm run check-type
 npx lint-staged
 
-FILE="../.env"
+FILE=".env"
 echo "$FILE path"
 if [ -s $FILE ]; then
 echo "in file $FILE found and not empty"
+# bash ./ran.sh
 export $(grep -v '^#' $FILE | tr -d ' ' | xargs)
-echo "$FILE is been read"
-case "${NODE_ENV,,}" in prod*) npm run build;; esac
+echo "$FILE is been read, $(NODE_ENV,,)"
+case "$(NODE_ENV,,)" in prod*) npm run build;; esac
 
 fi
 
