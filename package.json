@@ -81,8 +81,7 @@
       "eslint"
     ],
     "**/*.+(js|json|jsx|ts|tsx|html|css)": [
-      "npm run format",
-      "git add"
+      "npm run format"
     ]
   }
 }
