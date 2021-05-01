@@ -5,7 +5,7 @@ npm run check-type
 npx lint-staged
 
 FILE="../.env"
-if [[ -s $FILE ]]; then
+if [ -s $FILE ]; then
 
 export $(grep -v '^#' $FILE | tr -d ' ' | xargs)
 
